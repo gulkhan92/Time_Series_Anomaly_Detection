@@ -1,0 +1,32 @@
+# Hydra default config for anomaly detection
+
+defaults:
+  - data: kdd99
+  - model: lstm_autoencoder
+  - training: default
+
+data:
+  root_dir: ${oc.env:PROJECT_ROOT}/dataset/reduced_multiclass/reduced_multiclass/cleaned
+  train_file: train_5_classes_cleaned.csv
+  test_file: test_5_classes_cleaned.csv
+  sequence_length: 10
+  batch_size: 256
+  val_split: 0.2
+  normal_label: "normal"
+
+model:
+  input_dim: 41  # After preprocessing
+  hidden_dim: 128
+  latent_dim: 64
+  num_layers: 2
+  lr: 0.001
+  epochs: 50
+
+training:
+  device: "cpu"  # or "mps" for Apple Silicon
+  threshold_percentile: 95.0  # Anomaly threshold on train MSE
+
+paths:
+  models: "models/"
+  logs: "logs/"
+  artifacts: "artifacts/"
