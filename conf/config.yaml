@@ -15,7 +15,6 @@ data:
   normal_label: "normal"
 
 model:
-  input_dim: 41  # After preprocessing
   hidden_dim: 128
   latent_dim: 64
   num_layers: 2

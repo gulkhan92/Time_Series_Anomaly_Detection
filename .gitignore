@@ -178,3 +178,6 @@ logs-*
 # Large datasets (do not commit large data files)
 dataset/
 
+# Internal tracking files (public repo)
+TODO.md
+
