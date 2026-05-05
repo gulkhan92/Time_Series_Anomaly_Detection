@@ -21,7 +21,27 @@ This repository is intended to provide a baseline for hands-on practice with mod
 | **Click CLI** | `main.py train/infer` ready |
 | **Docker** | Containerized deployment |
 | **Pytest** | 80%+ coverage tests |
-| **Modular** | data/models/pipelines/utils |\n\n## Model Configuration\n\n| Parameter | Value |\n|-----------|-------|\n| Num LSTM Layers | 2 |\n| Hidden Dim | 128 |\n| Latent Dim | 64 |\n| Dropout | 0.2 |\n| Bidirectional | Yes (Encoder/Decoder) |\n| Loss Function | MSE |\n| Optimizer | Adam (lr=0.001) |\n| Max Epochs | 50 |\n| Batch Size | 256 |\n| Seq Length | 10 |\n| Threshold | 95th percentile train MSE |\n\n## Results Summary (KDD99 5-Class)
+| **Modular** | data/models/pipelines/utils |
+
+## Model Configuration
+
+| Parameter | Value |
+|-----------|-------|
+| Num Layers | 2 |
+| Hidden Dim | 128 |
+| Latent Dim | 64 |
+| Dropout | 0.2 |
+| Bidirectional | Yes (Encoder & Decoder) |
+| Loss Function | MSE |
+| Optimizer | Adam |
+| Learning Rate | 0.001 |
+| Epochs | 50 |
+| Batch Size | 256 |
+| Sequence Length | 10 |
+| Threshold | 95th percentile of train reconstruction errors |
+
+## Results Summary (KDD99 5-Class)
+
 | Metric | Value |
 |--------|-------|
 | Test F1 (macro) | **0.82** |
@@ -70,7 +90,7 @@ flowchart TD
 ```bash
 python -m venv .venv
 source .venv/bin/activate  # macOS/Linux
-# .venv\Scripts\activate  # Windows
+# .venv\\Scripts\\activate  # Windows
 pip install -r requirements.txt
 ```
 
