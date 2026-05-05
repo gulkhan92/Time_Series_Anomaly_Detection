@@ -8,24 +8,7 @@
 [![Docker](https://img.shields.io/badge/Docker-ready-blue.svg)](https://www.docker.com/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/gulkhan92/Time_Series_Anomaly_Detection/blob/main/LICENSE)
 
-## Table of Contents
-- [Overview](#overview)
-- [Features](#features)
-- [Installation](#installation)
-- [Quick Start](#quick-start)
-- [Architecture](#architecture)
-- [Results](#results)
-- [Project Structure](#project-structure)
-- [Testing](#testing)
-- [Docker](#docker)
-- [Contributing](#contributing)
-- [License](#license)
-
-## Overview
-
-Production-ready, modular codebase for **unsupervised time series anomaly detection** using **LSTM Autoencoder** on the **KDD Cup 1999** network intrusion dataset.
-
-Train on normal data, detect anomalies via reconstruction error (MSE threshold).
+This repository is intended to provide a baseline for hands-on practice with modular codebase for unsupervised anomaly detection using LSTM Autoencoder on network intrusion data (KDD99).
 
 ## Features
 
