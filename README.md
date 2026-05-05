@@ -21,9 +21,7 @@ This repository is intended to provide a baseline for hands-on practice with mod
 | **Click CLI** | `main.py train/infer` ready |
 | **Docker** | Containerized deployment |
 | **Pytest** | 80%+ coverage tests |
-| **Modular** | data/models/pipelines/utils |
-
-## Results Summary (KDD99 5-Class)
+| **Modular** | data/models/pipelines/utils |\n\n## Model Configuration\n\n| Parameter | Value |\n|-----------|-------|\n| Num LSTM Layers | 2 |\n| Hidden Dim | 128 |\n| Latent Dim | 64 |\n| Dropout | 0.2 |\n| Bidirectional | Yes (Encoder/Decoder) |\n| Loss Function | MSE |\n| Optimizer | Adam (lr=0.001) |\n| Max Epochs | 50 |\n| Batch Size | 256 |\n| Seq Length | 10 |\n| Threshold | 95th percentile train MSE |\n\n## Results Summary (KDD99 5-Class)
 | Metric | Value |
 |--------|-------|
 | Test F1 (macro) | **0.82** |
